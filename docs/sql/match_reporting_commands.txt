@@ -1,0 +1,79 @@
+-- Match Reporting - Useful SQL and cURL Commands
+-- Save and reuse for testing/operations
+
+-- 1) Ensure enum has NEEDS_RESOLUTION (run once)
+ALTER TYPE "MatchStatus" ADD VALUE IF NOT EXISTS 'NEEDS_RESOLUTION';
+
+-- 2) Assign teams to a season/division/region (adjust IDs)
+UPDATE "Team"
+SET "seasonId" = '<SEASON_ID>',
+    "divisionId" = '<DIVISION_ID>',
+    region = 'US_EAST'
+WHERE id IN ('<HOME_TEAM_ID>', '<AWAY_TEAM_ID>');
+
+-- 3) Create a scheduled match (set updatedAt if NOT NULL)
+INSERT INTO "Match" (
+  id, "seasonId", "divisionId", region, "weekNumber", "scheduledAt", status,
+  "homeTeamId", "awayTeamId", "updatedAt"
+)
+VALUES (
+  '<MATCH_ID>',
+  '<SEASON_ID>',
+  '<DIVISION_ID>',
+  'US_EAST',
+  1,
+  now(),
+  'SCHEDULED',
+  '<HOME_TEAM_ID>',
+  '<AWAY_TEAM_ID>',
+  now()
+)
+ON CONFLICT (id) DO NOTHING;
+
+-- 4) Inspect a specific match’s state and submissions
+SELECT id, status, "homeScore", "awayScore", notes
+FROM "Match"
+WHERE id = '<MATCH_ID>';
+
+-- 5) See who submitted (JSON)
+SELECT
+  notes->'homeSubmit'   AS home_submit,
+  notes->'awaySubmit'   AS away_submit
+FROM "Match"
+WHERE id = '<MATCH_ID>';
+
+-- 6) Pending after one submission (has one submit, no scores yet)
+SELECT id, status
+FROM "Match"
+WHERE ("homeScore" IS NULL AND "awayScore" IS NULL)
+  AND (
+    (notes ? 'homeSubmit' AND NOT notes ? 'awaySubmit')
+    OR
+    (notes ? 'awaySubmit' AND NOT notes ? 'homeSubmit')
+  );
+
+-- 7) Winner conflict queued for review
+SELECT id, status
+FROM "Match"
+WHERE status = 'NEEDS_RESOLUTION';
+
+-- 8) Standings for teams in your test match
+SELECT id, name, wins, losses, ties, points
+FROM "Team"
+WHERE id IN ('<HOME_TEAM_ID>','<AWAY_TEAM_ID>');
+
+-- Optional: Avoid needing updatedAt in every raw insert (set default)
+-- ALTER TABLE "Match" ALTER COLUMN "updatedAt" SET DEFAULT now();
+
+-- cURL examples (submit results via API)
+-- Home (claims 3–1 win)
+curl -X POST http://localhost:3000/api/match/report \
+  -H "Content-Type: application/json" \
+  -d '{"matchId":"<MATCH_ID>","teamId":"<HOME_TEAM_ID>","myScore":3,"theirScore":1,"notes":"gg"}'
+
+-- Away confirms (1–3)
+curl -X POST http://localhost:3000/api/match/report \
+  -H "Content-Type: application/json" \
+  -d '{"matchId":"<MATCH_ID>","teamId":"<AWAY_TEAM_ID>","myScore":1,"theirScore":3,"notes":"confirmed"}'
+
+

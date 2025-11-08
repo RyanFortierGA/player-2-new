@@ -1,0 +1,10 @@
+{
+  "name": "@repo/tailwind-config",
+  "version": "0.0.0",
+  "private": true,
+  "main": "theme.css",
+  "devDependencies": {
+    "eslint": "8.57.0",
+    "tailwindcss": "^4.1.11"
+  }
+}
