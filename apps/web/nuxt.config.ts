@@ -14,6 +14,7 @@ export default defineNuxtConfig({
 
   alias: {
     "@config": path.resolve(__dirname, path.join("..", "..", "config")),
+    "utils": path.resolve(__dirname, path.join("..", "..", "packages", "utils")),
   },
 
   css: ["~/assets/css/main.css"],

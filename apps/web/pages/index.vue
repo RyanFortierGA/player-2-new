@@ -123,7 +123,7 @@
   <!-- Social proof placeholder -->
   <section class="bg-muted/20">
     <div class="container mx-auto px-6 py-12">
-      <p class="text-center text-muted-foreground">Trusted by players across US/EU/ASIA. More regions coming soon.</p>
+      <!-- <p class="text-center text-muted-foreground">Trusted by players across US/EU/ASIA. More regions coming soon.</p> -->
     </div>
   </section>
 </template>
