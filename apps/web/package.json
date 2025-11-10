@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "prebuild": "pnpm -w --filter database prisma generate",
     "build": "nuxt build",
     "start": "nuxt start",
     "dev": "nuxt dev --dotenv ../../.env.local",
