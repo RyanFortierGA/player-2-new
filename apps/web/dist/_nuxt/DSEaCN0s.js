@@ -1,0 +1,1 @@
+import{d as r,i as t,o as n,bh as m,at as c,u as e}from"./8QiH33WF.js";import{u as _}from"./Cr4JGMLb.js";const f=r({__name:"FormMessage",setup(p){const{name:s,formMessageId:o}=_();return(u,i)=>{const a=m;return n(),t(a,{id:e(o),as:"p",name:c(e(s)),class:"text-destructive text-sm font-normal"},null,8,["id","name"])}}});export{f as _};

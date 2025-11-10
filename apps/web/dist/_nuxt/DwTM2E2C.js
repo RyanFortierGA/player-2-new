@@ -1,0 +1,1 @@
+import{d as e,c as s,o as t,e as a,u as n,T as r}from"./8QiH33WF.js";const o={class:"flex items-center justify-center py-8"},m=e({__name:"SaasLoadingSpinner",setup(c){return(i,p)=>(t(),s("div",o,[a(n(r),{class:"size-4 animate-spin text-3xl text-primary"})]))}});export{m as _};

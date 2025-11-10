@@ -1,0 +1,1 @@
+import{d as a,z as n,c as o,A as s,o as c}from"./8QiH33WF.js";const m=a({__name:"index",async setup(r){let e,t;return[e,t]=n(()=>s("/app/settings/account/general")),await e,t(),(_,p)=>(c(),o("div"))}});export{m as default};

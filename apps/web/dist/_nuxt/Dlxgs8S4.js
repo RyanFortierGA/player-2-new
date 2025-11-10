@@ -1,0 +1,1 @@
+import{c as e}from"./FTH3AbiA.js";const o=()=>({legacy:!1,availableLocales:Object.keys(e.i18n.locales),locale:e.i18n.defaultLocale,fallbackLocale:e.i18n.defaultLocale,numberFormats:Object.fromEntries(Object.entries(e.i18n.locales).map(([a,l])=>[a,l.numberFormats]))});export{o as default};

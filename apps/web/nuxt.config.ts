@@ -10,6 +10,25 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: "netlify",
+    prerender: {
+      // We are generating a static site for Netlify "dist" publishing.
+      // Disable crawling and explicitly list safe routes to avoid build-time 404s.
+      crawlLinks: false,
+      routes: ["/", "/rules", "/league/leaderboard", "/league/schedule"],
+      ignore: [
+        "/team/invitation",
+        "/legal/privacy-policy",
+        "/app/**",
+        "/auth/**",
+        "/api/**",
+        "/teams/**",
+      ],
+    },
+  },
+
+  // Route rules for static generation and redirects
+  routeRules: {
+    "/legal/privacy-policy": { redirect: { to: "/legal/privacy", statusCode: 301 } },
   },
 
   devtools: {

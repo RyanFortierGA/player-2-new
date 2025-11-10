@@ -1,0 +1,1 @@
+import{d as a,z as o,c as s,A as c,k as i,o as r}from"./8QiH33WF.js";const d=a({__name:"index",async setup(_){let e,t;const n=i();return[e,t]=o(()=>c(n.public.auth.redirectPath)),await e,t(),(m,p)=>(r(),s("div"))}});export{d as default};
