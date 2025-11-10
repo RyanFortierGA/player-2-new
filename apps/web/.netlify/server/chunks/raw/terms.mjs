@@ -1,0 +1,5 @@
+// ROLLUP_NO_REPLACE 
+ const terms = "{\"parsed\":{\"_path\":\"/legal/terms\",\"_dir\":\"legal\",\"_draft\":false,\"_partial\":false,\"_locale\":\"\",\"title\":\"Terms and conditions\",\"description\":\"This is a placeholder text for your terms of service. Edit the file content/legal/terms.md to add your own content.\",\"body\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"p\",\"props\":{},\"children\":[{\"type\":\"text\",\"value\":\"This is a placeholder text for your terms of service. Edit the file \"},{\"type\":\"element\",\"tag\":\"code\",\"props\":{\"className\":[]},\"children\":[{\"type\":\"text\",\"value\":\"content/legal/terms.md\"}]},{\"type\":\"text\",\"value\":\" to add your own content.\"}]}],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"content:legal:terms.md\",\"_source\":\"content\",\"_file\":\"legal/terms.md\",\"_stem\":\"legal/terms\",\"_extension\":\"md\"},\"hash\":\"lEqHrfIXJi\"}";
+
+export { terms as default };
+//# sourceMappingURL=terms.mjs.map

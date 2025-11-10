@@ -1,0 +1,1 @@
+import{v as o,j as a,A as c}from"./Di62MCsn.js";const i=({name:r="q",defaultValue:t="",replace:u=!1}={})=>{const s=o();return{searchQuery:a({get:()=>{const e=s.query[r];return e?String(e):t},set:e=>{c({query:{[r]:e}},{replace:u})}})}};export{i as u};

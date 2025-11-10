@@ -1,0 +1,5 @@
+// ROLLUP_NO_REPLACE 
+ const privacy_de = "{\"parsed\":{\"_path\":\"/legal/privacy.de\",\"_dir\":\"legal\",\"_draft\":false,\"_partial\":false,\"_locale\":\"\",\"title\":\"Datenschutzerklärung\",\"description\":\"Dies ist die Platzhalterseite für Ihre Datenschutzerklärung. Bearbeiten Sie die Datei content/legal/privacy-policy.md, um Ihren eigenen Inhalt hinzuzufügen.\",\"body\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"p\",\"props\":{},\"children\":[{\"type\":\"text\",\"value\":\"Dies ist die Platzhalterseite für Ihre Datenschutzerklärung. Bearbeiten Sie die Datei \"},{\"type\":\"element\",\"tag\":\"code\",\"props\":{\"className\":[]},\"children\":[{\"type\":\"text\",\"value\":\"content/legal/privacy-policy.md\"}]},{\"type\":\"text\",\"value\":\", um Ihren eigenen Inhalt hinzuzufügen.\"}]}],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"content:legal:privacy.de.md\",\"_source\":\"content\",\"_file\":\"legal/privacy.de.md\",\"_stem\":\"legal/privacy.de\",\"_extension\":\"md\"},\"hash\":\"4hD1K9oHPl\"}";
+
+export { privacy_de as default };
+//# sourceMappingURL=privacy.de.mjs.map

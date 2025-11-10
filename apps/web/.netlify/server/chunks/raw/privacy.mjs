@@ -1,0 +1,5 @@
+// ROLLUP_NO_REPLACE 
+ const privacy = "{\"parsed\":{\"_path\":\"/legal/privacy\",\"_dir\":\"legal\",\"_draft\":false,\"_partial\":false,\"_locale\":\"\",\"title\":\"Privacy policy\",\"description\":\"This is a placeholder text for your privacy policy. Edit the file content/legal/privacy-policy.md to add your own content.\",\"body\":{\"type\":\"root\",\"children\":[{\"type\":\"element\",\"tag\":\"p\",\"props\":{},\"children\":[{\"type\":\"text\",\"value\":\"This is a placeholder text for your privacy policy. Edit the file \"},{\"type\":\"element\",\"tag\":\"code\",\"props\":{\"className\":[]},\"children\":[{\"type\":\"text\",\"value\":\"content/legal/privacy-policy.md\"}]},{\"type\":\"text\",\"value\":\" to add your own content.\"}]}],\"toc\":{\"title\":\"\",\"searchDepth\":2,\"depth\":2,\"links\":[]}},\"_type\":\"markdown\",\"_id\":\"content:legal:privacy.md\",\"_source\":\"content\",\"_file\":\"legal/privacy.md\",\"_stem\":\"legal/privacy\",\"_extension\":\"md\"},\"hash\":\"7pCiSss5Xf\"}";
+
+export { privacy as default };
+//# sourceMappingURL=privacy.mjs.map

@@ -1,0 +1,1 @@
+import{d as a,z as n,c as s,A as o,o as r}from"./Di62MCsn.js";const m=a({__name:"index",async setup(_){let e,t;return[e,t]=n(()=>o("/app/admin/users")),await e,t(),(c,p)=>(r(),s("div"))}});export{m as default};

@@ -1,0 +1,1 @@
+import{u as n}from"./COzg6gEF.js";import{d as a,c,o as m,y as i,u as s,E as p,G as l}from"./Di62MCsn.js";const d=["id"],x=a({__name:"FormDescription",props:{class:{}},setup(e){const o=e,{formDescriptionId:t}=n();return(r,u)=>(m(),c("p",{id:s(t),class:i(s(p)("text-sm text-muted-foreground",o.class))},[l(r.$slots,"default")],10,d))}});export{x as _};
