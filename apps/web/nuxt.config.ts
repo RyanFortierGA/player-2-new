@@ -38,7 +38,7 @@ export default defineNuxtConfig({
         umamiTrackingId: process.env.NUXT_PUBLIC_UMAMI_TRACKING_ID,
       },
       auth: {
-        redirectPath: "/app/dashboard",
+        redirectPath: "/app/team",
       },
     },
   },

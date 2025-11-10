@@ -1,5 +1,4 @@
 <script setup lang="ts">
-definePageMeta({ layout: 'saas-app' });
 if (import.meta.server) {
   await navigateTo('/app/team');
 } else {
@@ -10,3 +9,5 @@ if (import.meta.server) {
 <template>
   <div />
 </template>
+
+
