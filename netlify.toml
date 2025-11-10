@@ -1,9 +1,10 @@
 [build]
-  command = "corepack enable && pnpm install -w --frozen-lockfile && pnpm -C apps/web build"
+  command = "corepack enable && pnpm install -w --frozen-lockfile && pnpm -C apps/web install --frozen-lockfile && pnpm -C apps/web build"
   publish = "apps/web/.netlify/publish"
   ignore = "sh -c '[ \"$BRANCH\" != \"main\" ]'"
 
 [build.environment]
+  NITRO_PRESET = "netlify"
   NODE_VERSION = "20"
 
 [functions]
