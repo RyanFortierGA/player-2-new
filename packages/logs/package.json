@@ -9,7 +9,7 @@
     "utils": "workspace:*"
   },
   "devDependencies": {
-    "@types/nodemailer": "^6.4.17",
+    "@types/nodemailer": "^7.0.3",
     "eslint": "8.57.0"
   }
 }
