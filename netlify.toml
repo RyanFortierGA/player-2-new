@@ -5,5 +5,7 @@
 
 [build.environment]
   NITRO_PRESET = "netlify"
+  NITRO_LOG_LEVEL = "debug"
+  PNPM_FLAGS = "--shamefully-hoist"
   NODE_VERSION = "20"
 
