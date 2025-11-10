@@ -1,6 +1,6 @@
 [build]
   command = "corepack enable && pnpm install -w --frozen-lockfile && pnpm -C apps/web build"
-  publish = "apps/web/dist"
+  publish = "apps/web/.netlify/publish"
   ignore = "sh -c '[ \"$BRANCH\" != \"main\" ]'"
 
 [build.environment]
