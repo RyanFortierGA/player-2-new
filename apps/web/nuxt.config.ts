@@ -10,10 +10,6 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: "netlify",
-    output: {
-      dir: ".netlify",
-      publicDir: ".netlify/publish",
-    },
     prerender: {
       // We are generating a static site for Netlify "dist" publishing.
       // Disable crawling and explicitly list safe routes to avoid build-time 404s.
