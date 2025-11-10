@@ -8,6 +8,10 @@ const baseUrl = getBaseUrl();
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-07",
 
+  nitro: {
+    preset: "netlify",
+  },
+
   devtools: {
     enabled: true,
   },
