@@ -1,0 +1,9 @@
+[build]
+  command = "corepack enable && pnpm i -w --frozen-lockfile && pnpm -w --filter web build"
+  publish = "apps/web/.netlify/publish"
+
+[build.environment]
+  NITRO_PRESET = "netlify"
+  NODE_VERSION = "20"
+
+

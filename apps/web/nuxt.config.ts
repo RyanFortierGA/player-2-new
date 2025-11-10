@@ -75,11 +75,13 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      title: "Player 2",
+      titleTemplate: "%s - Player 2",
       link: [
         {
           rel: "icon",
-          type: "image/png",
-          href: "/icon.png",
+          type: "image/svg+xml",
+          href: "/favicon.svg",
         },
       ],
     },
