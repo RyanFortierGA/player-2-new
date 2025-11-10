@@ -1,5 +1,5 @@
 [build]
-  command = "corepack enable && pnpm i -w --frozen-lockfile && pnpm -w --filter web build"
+  command = "corepack enable && pnpm install -w --frozen-lockfile && pnpm -C apps/web install --frozen-lockfile && pnpm -C apps/web build"
   publish = "apps/web/.netlify/publish"
 
 [build.environment]
