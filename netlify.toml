@@ -1,5 +1,5 @@
 [build]
-  command = "corepack enable && pnpm install -w --frozen-lockfile && pnpm -C apps/web install --frozen-lockfile && pnpm -C apps/web build"
+  command = "corepack enable && pnpm install -w --frozen-lockfile && pnpm -C packages/database prisma generate && pnpm -C apps/web install --frozen-lockfile && pnpm -C apps/web build"
   publish = "apps/web/.netlify/publish"
   ignore = "sh -c '[ \"$BRANCH\" != \"main\" ]'"
 
