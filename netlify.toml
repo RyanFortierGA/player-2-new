@@ -9,3 +9,8 @@
   PNPM_FLAGS = "--shamefully-hoist"
   NODE_VERSION = "20"
 
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/server"
+  status = 200
+
