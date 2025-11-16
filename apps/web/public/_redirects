@@ -1,0 +1,3 @@
+/api/trpc/*	/.netlify/functions/server/api/trpc/:splat	200!
+
+
