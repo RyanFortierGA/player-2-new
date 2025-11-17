@@ -14,5 +14,5 @@
   to = "/.netlify/functions/server/api/trpc/:splat"
   status = 200
   force = true
-
+ 
 
