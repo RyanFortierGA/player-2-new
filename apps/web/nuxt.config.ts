@@ -30,6 +30,9 @@ export default defineNuxtConfig({
   // Route rules for static generation and redirects
   routeRules: {
     "/legal/privacy-policy": { redirect: { to: "/legal/privacy", statusCode: 301 } },
+    "/api/trpc/**": {
+      redirect: { to: "/.netlify/functions/server/api/trpc/:splat", statusCode: 200 },
+    },
   },
 
   devtools: {
