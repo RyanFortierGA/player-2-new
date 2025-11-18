@@ -1,4 +1,5 @@
 /api/trpc/*	/.netlify/functions/server/api/trpc/:splat	200!
+/api/trpc	/.netlify/functions/server/api/trpc	200!
 /legal/privacy-policy	/legal/privacy	301
 
 
