@@ -1,4 +1,5 @@
 [build]
+  base = "p2-v2/PlayerTWO"
   command = "corepack enable && pnpm install -w --frozen-lockfile && pnpm -C apps/web install --frozen-lockfile && pnpm -C apps/web build && node scripts/postbuild.mjs"
   publish = "apps/web/.netlify/publish"
   ignore = "sh -c '[ \"$BRANCH\" != \"main\" ]'"
@@ -8,6 +9,9 @@
   NITRO_LOG_LEVEL = "debug"
   PNPM_FLAGS = "--shamefully-hoist"
   NODE_VERSION = "20"
+
+[functions]
+  directory = "apps/web/.netlify/functions-internal"
 
 [[redirects]]
   from = "/api/trpc/*"
@@ -32,5 +36,5 @@
   to = "/.netlify/functions/server/trpc"
   status = 200
   force = true
- 
 
+ 
