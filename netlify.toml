@@ -23,5 +23,17 @@
   to = "/.netlify/functions/server/api/trpc"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/trpc/*"
+  to = "/.netlify/functions/server/trpc/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/trpc"
+  to = "/.netlify/functions/server/trpc"
+  status = 200
+  force = true
  
 
