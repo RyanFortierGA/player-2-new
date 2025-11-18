@@ -9,9 +9,6 @@
   PNPM_FLAGS = "--shamefully-hoist"
   NODE_VERSION = "20"
 
-[functions]
-  directory = "apps/web/.netlify/functions-internal"
-
 [[redirects]]
   from = "/api/trpc/*"
   to = "/.netlify/functions/server/api/trpc/:splat"
