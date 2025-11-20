@@ -16,7 +16,7 @@ export default defineEventHandler(async (event) => {
     (raw && (raw as any)[0]?.json) ||
     (raw && (raw as any).input) ||
     raw ||
-    {};
+    {}; 
   const email = (maybe as any).email as string | undefined;
   const password = (maybe as any).password as string | undefined;
 

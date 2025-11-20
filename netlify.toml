@@ -37,3 +37,15 @@
   force = true
 
  
+[[redirects]]
+  from = "/api/auth/*"
+  to = "/.netlify/functions/server/api/auth/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/auth"
+  to = "/.netlify/functions/server/api/auth"
+  status = 200
+  force = true
+
