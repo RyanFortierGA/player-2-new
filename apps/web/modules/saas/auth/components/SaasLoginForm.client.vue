@@ -3,11 +3,12 @@
   import { joinURL } from "ufo";
   import { z } from "zod";
   import { oAuthProviders } from "./SaasSocialSigninButton.client.vue";
+  import { supabase } from "@/supabase";
 
   const runtimeConfig = useRuntimeConfig();
   const { apiCaller } = useApiCaller();
   const { t } = useTranslations();
-  const { user, loaded } = useUser({ initialUser: null });
+  const { user, loaded, reloadUser } = useUser({ initialUser: null });
 
   const formSchema = toTypedSchema(
     z.object({
@@ -82,11 +83,20 @@
   const onSubmit = handleSubmit(async (values) => {
     try {
       if (signinMode.value === "password") {
-        await $fetch("/api/auth/login-with-password", {
-          method: "POST",
-          body: { email: values.email, password: values.password! },
+        const { data, error } = await supabase.auth.signInWithPassword({
+          email: values.email,
+          password: values.password!,
         });
-
+        if (error) throw error;
+        const accessToken = data.session?.access_token;
+        if (!accessToken) {
+          throw new Error("Missing access token");
+        }
+        await $fetch("/api/auth/login-with-supabase", {
+          method: "POST",
+          headers: { Authorization: `Bearer ${accessToken}` },
+        });
+        await reloadUser();
         handleRedirect();
       } else {
         await apiCaller.auth.loginWithEmail.mutate({
