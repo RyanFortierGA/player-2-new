@@ -82,9 +82,9 @@
   const onSubmit = handleSubmit(async (values) => {
     try {
       if (signinMode.value === "password") {
-        await apiCaller.auth.loginWithPassword.mutate({
-          email: values.email,
-          password: values.password!,
+        await $fetch("/api/auth/login-with-password", {
+          method: "POST",
+          body: { email: values.email, password: values.password! },
         });
 
         handleRedirect();
