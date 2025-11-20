@@ -5,3 +5,6 @@ node_modules
 .cache
 .output
 .env
+ 
+# Ensure server API route files are tracked
+!server/api/**

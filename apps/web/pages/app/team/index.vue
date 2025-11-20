@@ -2,7 +2,7 @@
 definePageMeta({ layout: 'saas-app', ssr: false });
 const { apiCaller } = useApiCaller();
 const { user } = useUser();
-
+ 
 const currentTeamId = useCurrentTeamIdCookie();
 
 watchEffect(() => {
