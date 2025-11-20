@@ -6,7 +6,7 @@ import type { ApiRouter } from "api/modules/trpc";
 export const useApiCaller = () => {
   const isProd = import.meta.env.PROD;
   const runtimeConfig = useRuntimeConfig();
-  const trpcUrl = "/api/trpc";
+  const trpcUrl = isProd ? "/trpc" : "/api/trpc";
   const apiCaller = createTRPCNuxtClient<ApiRouter>({
     links: [
       httpBatchLink({
