@@ -1,3 +1,4 @@
+/*	/.netlify/functions/server	200!
 /api/trpc/*	/.netlify/functions/server/api/trpc/:splat	200!
 /api/trpc	/.netlify/functions/server/api/trpc	200!
 /trpc/*	/.netlify/functions/server/trpc/:splat	200!
