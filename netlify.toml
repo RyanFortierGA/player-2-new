@@ -6,7 +6,7 @@
 [build.environment]
   NITRO_PRESET = "netlify"
   NITRO_LOG_LEVEL = "debug"
-  PNPM_FLAGS = "--shamefully-hoist"
+  PNPM_FLAGS = "--shamefully-hoist --no-frozen-lockfile"
   NODE_VERSION = "20"
 
 [functions]
