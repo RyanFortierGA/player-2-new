@@ -48,6 +48,8 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
+      // Changes in this value will trigger client refresh via version plugin
+      buildId: process.env.DEPLOY_ID || process.env.COMMIT_REF || String(Date.now()),
       siteUrl: baseUrl,
       s3AvatarsBucketName: process.env.NUXT_PUBLIC_S3_AVATARS_BUCKET_NAME,
       supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
