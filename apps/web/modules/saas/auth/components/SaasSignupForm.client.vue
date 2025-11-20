@@ -3,7 +3,7 @@
   import { AlertTriangleIcon } from "lucide-vue-next";
   import { joinURL } from "ufo";
   import { z } from "zod";
-  import { oAuthProviders } from "./SaasSocialSigninButton.client.vue";
+  // Social sign-in temporarily disabled
 
   const runtimeConfig = useRuntimeConfig();
   const { apiCaller } = useApiCaller();
@@ -100,14 +100,7 @@
 
     <SaasTeamInvitationInfo v-if="invitationCode" class="mb-6" />
 
-    <div class="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2">
-      <SaasSocialSigninButton
-        v-for="providerId of Object.keys(oAuthProviders)"
-        :key="providerId"
-        :provider="providerId"
-      />
-    </div>
-
+    <!-- Social sign-in hidden -->
     <hr class="my-8" />
 
     <form @submit.prevent="onSubmit" class="flex flex-col items-stretch gap-6">
