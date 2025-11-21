@@ -61,7 +61,7 @@
     "eslint-config-custom": "*",
     "nuxt-simple-robots": "^3.1.9",
     "start-server-and-test": "^2.0.8",
-    "tailwindcss": "^4.1.11",
+    "tailwindcss": "^4.1.17",
     "tsconfig": "workspace:*",
     "vee-validate": "^4.15.0"
   }
