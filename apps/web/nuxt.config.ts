@@ -14,7 +14,7 @@ export default defineNuxtConfig({
       // We are generating a static site for Netlify "dist" publishing.
       // Disable crawling and explicitly list safe routes to avoid build-time 404s.
       crawlLinks: false,
-      routes: ["/", "/rules", "/league/leaderboard", "/league/schedule"],
+      routes: ["/rules", "/league/leaderboard", "/league/schedule"],
       ignore: [
         "/team/invitation",
         "/legal/privacy-policy",

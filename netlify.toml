@@ -37,6 +37,16 @@
   force = true
 
  
+[[headers]]
+  for = "/"
+  [headers.values]
+    cache-control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/auth/*"
+  [headers.values]
+    cache-control = "public, max-age=0, must-revalidate"
+
 [[redirects]]
   from = "/api/trpc/auth.loginWithPassword"
   to = "/.netlify/functions/server/api/auth/login-with-password"
