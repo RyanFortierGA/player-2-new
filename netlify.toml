@@ -60,18 +60,6 @@
   force = true
  
 [[redirects]]
-  from = "/"
-  to = "/.netlify/functions/server"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/auth/*"
-  to = "/.netlify/functions/server"
-  status = 200
-  force = true
-
-[[redirects]]
   from = "/trpc/auth.loginWithPassword"
   to = "/.netlify/functions/server/api/auth/login-with-password"
   status = 200
