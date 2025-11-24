@@ -5,5 +5,7 @@
 </script>
 
 <template>
-  <SaasLoginForm />
+  <ClientOnly fallback="<div class='text-center text-muted-foreground'>Loading…</div>">
+    <SaasLoginForm />
+  </ClientOnly>
 </template>
